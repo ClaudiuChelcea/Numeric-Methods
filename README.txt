@@ -2,30 +2,27 @@
 
 Tasks:
 # 1. Nearest_neighbours:
-Am implementat functia nn_2x2 pe care am aplicat-o in continuare pentru
-nn_2x2_RGB pe fiecare canal in parte, unind cele trei matrici rezultate
-prin functia cat.
-Pentru resize, pe baza factorilor de scalare am creat matricea de
-transformare si inversa ei, apoi am aplicat pe fiecare punct
-transformarea, am gasit vecinul cel mai apropiat si am salvat
-rezultatul in matricea de output. Pentru RGB am aplicat aceasta
-functie pentru fiecare canal, dupa care am returnat matricea finala.
+I implemented the nn_2x2 function that I further applied for
+nn_2x2_RGB on each channel separately, joining the three resulting matrices
+by the function cat.
+For resize, based on the scaling factors we created the transform matrix and it's
+inverse, then I applied on each point the transformation, found the nearest neighbor and saved
+the result in the output matrix. For RGB I applied this
+function for each channel, after which I returned the final matrix.
 
 # 2. Bilinear:
-Pentru bilinear_2x2_RGB am folosit de trei ori bilinear_2x2, folosindu-ma
-de formula polinomului construit cu coeficientii functiei bilinear_coef.
-De asemenea, toate functiile RGB consta in aplicarea functiei individuale
-pe fiecare canal, urmand unirea matricilor create.
-Aceste functii, resize si rotate, au fost implementate dupa cum
-indica skeletul si pe baza informatiilor din pdf.
-Ultima functie, surrounding_points returneaza vecinii unui punct
-avand grija ca acesta sa nu depaseasca marginile imaginii.
+For bilinear_2x2_RGB I used bilinear_2x2 three times, using
+the polynomial formula constructed with the coefficients of the bilinear_coef function.
+Also, all RGB functions consist of the application of the individual function
+on each channel, followed by the concatenation of the created matrices.
+The last function, surround_points returns the neighbors of a point
+taking care that it does not exceed the edges of the image.
 
 # 3. Bicubic:
-Am realizat cele 3 derivate si le=am aplicat pe fiecare punct din I de cate
-trei ori, in functie de necesitate, pentru a afla Ix, Iy si Ixy in functia
-precalc.
-Functia surrounding_points ramane aceeasi ca la taskul anterior.
-Pentru bilinear_coef am definit matricile necesare pe care le-am inmultit
-imediat dupa ce am facut comversia in tipul de date double.
-Resize-ul RGB se rezuma la aplicarea resize-ului creat pe fiecare canal.
+I made the 3 derivatives and applied them on each point of 'I'
+three times, as needed, to find Ix, Iy and Ixy in the function
+'precalc'.
+The surround_points function remains the same as in the previous task.
+For bilinear_coef, we defined the necessary matrices that we multiplied
+immediately after I made the conversion to the double data type.
+RGB resize is the application of the resize created on each channel.
