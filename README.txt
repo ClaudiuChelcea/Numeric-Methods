@@ -1,7 +1,7 @@
-# Chelcea Claudiu-Marian, 312CA
+# Chelcea Claudiu-Marian
 
 Tasks:
-1. Nearest_neighbours:
+# 1. Nearest_neighbours:
 Am implementat functia nn_2x2 pe care am aplicat-o in continuare pentru
 nn_2x2_RGB pe fiecare canal in parte, unind cele trei matrici rezultate
 prin functia cat.
@@ -11,7 +11,7 @@ transformarea, am gasit vecinul cel mai apropiat si am salvat
 rezultatul in matricea de output. Pentru RGB am aplicat aceasta
 functie pentru fiecare canal, dupa care am returnat matricea finala.
 
-2. Bilinear:
+# 2. Bilinear:
 Pentru bilinear_2x2_RGB am folosit de trei ori bilinear_2x2, folosindu-ma
 de formula polinomului construit cu coeficientii functiei bilinear_coef.
 De asemenea, toate functiile RGB consta in aplicarea functiei individuale
@@ -21,7 +21,7 @@ indica skeletul si pe baza informatiilor din pdf.
 Ultima functie, surrounding_points returneaza vecinii unui punct
 avand grija ca acesta sa nu depaseasca marginile imaginii.
 
-3. Bicubic:
+# 3. Bicubic:
 Am realizat cele 3 derivate si le=am aplicat pe fiecare punct din I de cate
 trei ori, in functie de necesitate, pentru a afla Ix, Iy si Ixy in functia
 precalc.
